@@ -1,0 +1,79 @@
+﻿@model IEnumerable<TrackingDataAccess.bts_TrackingOrders>
+@using System.Web;
+
+@{
+    ViewData["Title"] = "List All Advania Track Orders";
+    Layout = "~/Views/Shared/_Layout_Simple.cshtml";
+}
+
+<center>
+
+<h1>List All Advania Track Orders</h1>
+<br>
+  
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipmentStatus)
+        </th>
+          <th>
+            @Html.DisplayNameFor(model => model.ShipmentDeliveryDate)
+        </th>
+          <th>
+            @Html.DisplayNameFor(model => model.ShipmentCarrier)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ShipmentTrackingURL)
+        </th>
+            <th>
+            @Html.DisplayNameFor(model => model.PurchaseOrderNumber)
+        </th>
+           <th>
+            @Html.DisplayNameFor(model => model.ExternalOrderNumber)
+        </th>
+            <th>
+            @Html.DisplayNameFor(model => model.KeepTrack)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipmentStatus)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.ShipmentDeliveryDate)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.ShipmentCarrier)
+        </td>
+           <td>
+            @Html.DisplayFor(modelItem => item.ShipmentTrackingURL)
+        </td>
+           <td>
+            @Html.DisplayFor(modelItem => item.PurchaseOrderNumber)
+        </td>
+           <td>
+            @Html.DisplayFor(modelItem => item.ExternalOrderNumber)
+        </td>
+             <td>
+            @Html.DisplayFor(modelItem => item.KeepTrack)
+        </td>
+          <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShipmentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShipmentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShipmentId })
+        </td>
+       
+    </tr>
+}
+
+</table>
+</center>

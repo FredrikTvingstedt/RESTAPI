@@ -1,0 +1,74 @@
+﻿@model TrackingDataAccess.bts_TrackingOrders;
+@using System.Web;
+
+@{
+    ViewData["Title"] = "Advania Track Order";
+    Layout = "~/Views/Shared/_Layout_Simple.cshtml";
+}
+
+<h1>Advania Track Order</h1>
+<br>
+
+<br>
+  
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipmentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipmentStatus)
+        </th>
+          <th>
+            @Html.DisplayNameFor(model => model.ShipmentDeliveryDate)
+        </th>
+          <th>
+            @Html.DisplayNameFor(model => model.ShipmentCarrier)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ShipmentTrackingURL)
+        </th>
+            <th>
+            @Html.DisplayNameFor(model => model.PurchaseOrderNumber)
+        </th>
+           <th>
+            @Html.DisplayNameFor(model => model.ExternalOrderNumber)
+        </th>
+           <th>
+            @Html.DisplayNameFor(model => model.KeepTrack)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.ShipmentId)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ShipmentStatus)
+        </td>
+         <td>
+            @Html.DisplayFor(model => model.ShipmentDeliveryDate)
+        </td>
+         <td>
+            @Html.DisplayFor(model => model.ShipmentCarrier)
+        </td>
+           <td>
+            @Html.DisplayFor(model => model.ShipmentTrackingURL)
+        </td>
+           <td>
+            @Html.DisplayFor(model => model.PurchaseOrderNumber)
+        </td>
+           <td>
+            @Html.DisplayFor(model => model.ExternalOrderNumber)
+        </td>
+               <td>
+            @Html.DisplayFor(model => model.KeepTrack)
+        </td>
+
+       
+    </tr>
+
+
+</table>
